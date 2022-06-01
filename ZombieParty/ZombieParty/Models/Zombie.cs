@@ -7,8 +7,8 @@ namespace ZombieParty.Models
 {
     public class Zombie
     {
-        public string Name;
-        public string Type;
-        public int Point;
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int Point { get; set; }
     }
 }
