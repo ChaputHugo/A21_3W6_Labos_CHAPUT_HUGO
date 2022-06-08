@@ -15,7 +15,7 @@ namespace ZombieParty.Models
     public int Point { get; set; }
     public string ShortDesc { get; set; }
     public string Name { get; set; }
-    public string Type { get; set; }
+    public int Force { get; set; }
 
     [Display(Name = "Zombie Type")]
     // FACULTATIF on peut formellement identifier le champ lien

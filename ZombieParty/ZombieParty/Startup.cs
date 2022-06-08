@@ -27,7 +27,7 @@ namespace ZombieParty
         {
             services.AddDbContext<ZombiePartyDbContext>(options =>
             options.UseSqlServer(
-            Configuration.GetConnectionString("DefaultConnection")));
+            Configuration.GetConnectionString("D0604ProfCegep")));
 
 
             services.AddControllersWithViews();
