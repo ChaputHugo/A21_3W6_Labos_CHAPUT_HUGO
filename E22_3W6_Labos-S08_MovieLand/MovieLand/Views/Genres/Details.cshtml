@@ -1,5 +1,5 @@
 ﻿@using MovieLand_Models
-@model Genre
+@model GenreVM
 
 @{
     ViewData["Title"] = "Détails";
@@ -12,11 +12,25 @@
     </div>
 </div>
 <div class="row genre-container justify-content-center align-items-center">
-    <div class="col-6 genre-infos-wrapper" id="@Model.GenreId">
+    <div class="col-6 genre-infos-wrapper" id="@Model.Id">
         <div class="row">
             <div class="col-12 title text-center">
                 <span class="name">@Model.Name</span>
             </div>
         </div>
     </div>
+</div>
+<div class="row items-container">
+
+    @*@foreach (GenreVM g in Model)
+    {
+        <div class="col-2 item-wrapper mb-3" id="@g.Id">
+            <div class="card border-0 h-100" style="width:100%;">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_multi_faces/@(g.Name)" alt="@g.Name">
+            </div>
+        </div>
+    }*@
+
+
+
 </div>
