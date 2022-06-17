@@ -11,7 +11,7 @@ namespace ZombieParty_Models
   {
     public int Id { get; set; }
     [DisplayName("Type Name")]
-    [Required(AllowEmptyStrings = false, ErrorMessage = "Type Name have to be fill.")]
+    [Required(AllowEmptyStrings = false, ErrorMessage = "RequiredValidation")]
     public string TypeName { get; set; }
 
     // Propriété de navigation

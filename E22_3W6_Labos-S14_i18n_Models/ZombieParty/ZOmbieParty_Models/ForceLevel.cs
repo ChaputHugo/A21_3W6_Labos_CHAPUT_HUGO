@@ -10,7 +10,8 @@ namespace ZombieParty_Models
   {
     [Key]
     public int Id { get; set; }
-    [Range(5, 10)]
+        [Display(Name = "Force Level")]
+        [Range(5, 10, ErrorMessage = "RangeValidation")]
     public int ForceLevelNiv { get; set; }
 
     // Propriété de navigation

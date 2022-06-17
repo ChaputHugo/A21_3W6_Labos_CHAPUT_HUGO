@@ -9,8 +9,10 @@ namespace ZombieParty_Models
 {
   public class Category
   {
+       
     public int Id { get; set; }
-    [StringLength(20, MinimumLength = 10)]
+        [Display(Name = "Category Name")]
+        [StringLength(20, MinimumLength = 10, ErrorMessage = "MinMaxCaractersValidation")]
     public string CategoryName { get; set; }
 
     // Propriété de navigation

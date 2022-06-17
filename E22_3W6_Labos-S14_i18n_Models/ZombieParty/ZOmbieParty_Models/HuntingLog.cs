@@ -10,14 +10,17 @@ namespace ZombieParty_Models
   public class HuntingLog
   {
     public int Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    [DataType(DataType.Date)] //Mettre aussi le type de input
+        [Display(Name = "Title")]
+        public string Title { get; set; }
+        [Display(Name = "Description")]
+        public string Description { get; set; }
+        [Display(Name = "Adventure date")]
+        [DataType(DataType.Date)] //Mettre aussi le type de input
     public DateTime AdventureDate { get; set; }
 
     // Propriété de navigation vers zombieHuntingLog
     //OBLIGATOIRE Pour la relation 1 à plusieurs avec zombieHuntingLog
-    public ICollection<ZombieHuntingLog> zombieHuntingLogs { get; set; }
+    public ICollection<ZombieHuntingLog> ZombieHuntingLogs { get; set; }
 
     // FACULTATIF on peut formellement identifier le champ lien
     [ForeignKey("Hunter")]

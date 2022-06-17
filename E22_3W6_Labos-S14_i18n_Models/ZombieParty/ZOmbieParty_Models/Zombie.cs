@@ -11,11 +11,15 @@ namespace ZombieParty_Models
   {
     [Key]
     public int Id { get; set; }
-    public string Name { get; set; }
-
-    [Range(1, 10, ErrorMessage = "RangeValidation")]
+        [Display(Name = "Name")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "RequiredValidation")]
+        public string Name { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "RequiredValidation")]
+        [Display(Name = "Point")]
+        [Range(1, 10, ErrorMessage = "RangeValidation")]
     public int Point { get; set; }
-    public string ShortDesc { get; set; }
+        [Display(Name = "Short Description")]
+        public string ShortDesc { get; set; }
 
     //Supprimée: remplacée par liaison à la table ZombieType
     //NOTE: vous devez supprimer la liste du ViewBag dans le ZombieController pour compiler
@@ -41,6 +45,6 @@ namespace ZombieParty_Models
 
     // Propriété de navigation vers zombieHuntingLog
     //OBLIGATOIRE Pour la relation 1 à plusieurs avec zombieHuntingLog
-    public ICollection<ZombieHuntingLog> zombieHuntingLogs { get; set; }
+    public ICollection<ZombieHuntingLog> ZombieHuntingLogs { get; set; }
   }
 }

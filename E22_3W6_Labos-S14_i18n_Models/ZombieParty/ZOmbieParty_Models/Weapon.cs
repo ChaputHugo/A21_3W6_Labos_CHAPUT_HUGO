@@ -10,9 +10,11 @@ namespace ZombieParty_Models
   public class Weapon
   {
     public int Id { get; set; }
-    [StringLength(20)]
+        [Display(Name = "Type name")]
+        [StringLength(20, ErrorMessage = "MinCaractersValidation")]
     public string TypeName { get; set; }
-    [StringLength(50)]
+        [Display(Name = "Description")]
+        [StringLength(50, ErrorMessage = "MinCaractersValidation")]
     public string Description { get; set; }
 
   }

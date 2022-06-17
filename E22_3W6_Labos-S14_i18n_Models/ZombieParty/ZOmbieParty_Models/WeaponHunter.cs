@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace ZombieParty_Models
     //[Key]
     [ForeignKey("Weapon")]
     public int Weapon_Id { get; set; }
-
-    public int quantity{ get; set; }
+        [Display(Name = "quantity")]
+        public int Quantity{ get; set; }
 
     // Propriété de navigation vers Hunter
     //OBLIGATOIRE Pour la relation 1 à plusieurs avec Hunter
