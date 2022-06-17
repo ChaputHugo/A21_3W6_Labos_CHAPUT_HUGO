@@ -32,6 +32,7 @@ namespace ZombieParty_DataAccess.Data
 
       // WeaponHunter: clé composée (composite key)
       modelBuilder.Entity<WeaponHunter>().HasKey(wh => new { wh.Weapon_Id, wh.Hunter_Id });
+
     }
   }
 }
