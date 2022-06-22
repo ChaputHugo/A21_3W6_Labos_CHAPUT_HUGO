@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Appl_TestsUnitaires;
 
 namespace App_TestsUnitaires_Tests_XU
 {
@@ -8,7 +9,7 @@ namespace App_TestsUnitaires_Tests_XU
         [Fact]
         public void Test1()
         {
-
+          
         }
     }
 }
